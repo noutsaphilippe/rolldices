@@ -7,30 +7,38 @@
 }
 body {
     background-color: rgb(153, 126, 85);
-    
     background-image: url(image/casino_2.jpeg);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-body h1{
+.sub-titles {
+    width: 100%;
+    height: auto;
+    position: static;
+}
+.sub-titles h1{
     margin-top: 50px;
-    margin-left: 70px;
     text-align: center;
     font-family: fantasy;
     color: #f8f8f8;
+    font-weight: 900;
 }
 .container {
+    grid-template-rows: 1fr 1fr ;
     background-color: #e0e0e0;
-    width: 650px;
+    width: 500px;
     height: 500px;
     box-shadow: 13px 13px 25px rgba(0, 0, 0, 0.4);
     position: relative;
     margin-top: 100px;
-    margin-left: 30%;
     border-radius: 5px;
 }
 .score {
     display: grid;
-    margin-left : 230px;
+    margin-left : 160px;
     grid-template-rows: repeat(3, 25px);
     text-align: center;
     width: 200px;
@@ -43,7 +51,7 @@ body h1{
 }
 .live-display {
     text-align: center;
-    width: 350px;
+    width: 250px;
     height: auto;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
@@ -56,6 +64,16 @@ body h1{
     margin-top: 40px;
     column-gap: 20px;
 
+}
+.dice-throw {
+    display: grid;
+    grid-template-rows: 1fr 50px 50px;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height:auto;
+    margin-bottom: 40px;
 }
 .dice-throw img {
     width: 130px;
@@ -70,7 +88,7 @@ body h1{
 .img1 {
     position: absolute;
     margin-top: -6%;
-    margin-left: 100px;
+    margin-left: 142px;
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -85,14 +103,13 @@ body h1{
     }
 }
 .dice-throw button {
-    width: 160px;
-    height:45px;
+    width: 120px;
+    height:35px;
     background-color: rgb(96, 133, 40);
     color: #f8f8f8;
     border-radius: 5px;
     font-size: 18px;
     border-color: transparent;
-    margin-top: 55px;
 }
 .dice-throw button:hover {
     cursor: pointer;
@@ -105,11 +122,11 @@ body h1{
 }
 .arrow {
     display: none;
-    position: absolute;
+    position: static;
     width: 120px;
     height: 60px;
-    margin-left: 920px;
-    margin-top: -33%;
+    margin-left: 420px;
+    margin-top: -163%;
     font-weight: bold;
     animation: arrowMove infinite 2s linear;
 }
@@ -153,4 +170,153 @@ body h1{
     opacity: 0.5;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
     cursor: default;
+}
+/*----------------responsive setting-----------------*/
+@media (max-width:666px) {
+    .sub-titles {
+        width: 80%;
+        height: auto;
+        position: static;
+    }
+    .sub-titles h1{
+        margin-top: 50px;
+    }
+    .container {
+        grid-template-rows: 1fr 1fr ;
+        background-color: #e0e0e0;
+        width: 350px;
+        height: 500px;
+        box-shadow: 13px 13px 25px rgba(0, 0, 0, 0.4);
+        position: relative;
+        margin-top: 100px;
+        border-radius: 5px;
+    }
+    .score {
+        margin-left : 110px;
+        width: 40%;
+    
+    }
+    .live-display {
+        width: 190px;
+        height: 80%;
+    }
+    .main-box {
+        display: flex;
+        margin-top: 40px;
+        column-gap: 20px;
+    
+    }
+    .dice-throw img {
+        width: 80px;  
+    }
+    
+    .img1 {
+        position: absolute;
+        margin-top: -6%;
+        margin-left: 100px;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+    .dice-throw button {
+        width: 100px;
+        height:35px;
+        font-size: 14px;
+    }
+    .dice-throw {
+        display: grid;
+        align-content:center ;
+        margin-left: 30px;
+        width: 120px;
+    }
+    .arrow {
+        display: none;
+        position: static;
+        width: 120px;
+        height: 60px;
+        margin-left: 100%;
+        margin-top: -253%;
+    }
+    .main-box {
+        display: flex;
+        margin-top: 40px;
+        column-gap: 20px;
+    }
+    .img1 {
+        margin-top: -10%;
+        width: 27px;
+        height: 27px;
+    }
+}
+@media (max-width:394px) {
+    .sub-titles {
+        width: 60%;
+        height: auto;
+        position: static;
+    }
+    .sub-titles h1{
+        margin-top: 50px;
+        font-weight:bold;
+        font-size: 25px;
+    }
+    .container {
+        grid-template-rows: 1fr 1fr ;
+        width: 260px;
+        height: 350px;
+        margin-top: 20px;    }
+    .score {
+        margin-left : 80px;
+        width: 40%;
+    }
+    .score p {
+        font-size: 90%;
+    }
+    .live-display {
+        width: 190px;
+    }
+    .disp-player,
+    .scr-final,
+    .scr-1st,
+    .scr-2nd {
+        height: 25px;
+    }
+    .dice-throw img {
+        width: 50px;  
+    }
+    .dice-throw button {
+        width: 70px;
+        height:20px;
+        font-size: 8px;
+        margin-top: 20px;
+    }
+    .dice-throw {
+        display: grid;
+        align-content:center ;
+        margin-left: 30px;
+        width: 120px;
+    }
+    .arrow {
+        width: 70px;
+        height: 40px;
+        margin-left: 92%;
+        margin-top: -223%;
+    }
+    .main-box {
+        display: flex;
+        margin-top: 40px;
+        column-gap: 20px;
+    }
+    .img1 {
+        width: 22px;
+        height: 22px;
+        margin-left: 27%;
+    }
+    .live-player p,h3 {
+        font-size: 80%;
+    }
+    .live-compute p,h3,
+    .fthrow p {
+        font-size: 80%;
+    }
 }
