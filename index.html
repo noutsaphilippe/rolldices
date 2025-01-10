@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASINO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>ROLL THE DICE GAME</h1>
+    <div class="container">
+        <div class="score"> 
+            <p class="score-final">Final Score</p>
+            <p class="score-player js-you">YOU: 0</p>
+            <p class="score-computer js-ai">AI: 0</p>
+        </div>
+        <div class="main-box">
+            <div class="live-display"> 
+                <div class="live-player js-livePlayer">
+                    <h3 class="disp-player">Player tab</h3>
+                    <p class="scr-final" id="sum">Sum</p>
+                    <div class="fthrow">
+                        <p class="scr-1st" id="first">1st throw: 0</p>
+                        <img class="img1" src="image/diceh1.jpeg" id="imgf">
+                    </div>
+                    <div class="fthrow">
+                        <p class="scr-2nd" id="2nd">2nd throw: 0</p>
+                        <img class="img1" src="image/diceh1.jpeg" id="imgs">
+                    </div>
+                </div>
+                <div class="live-compute"></div>
+                    <h3 class="disp-player">AI(computer) tab</h3>
+                    <p class="scr-final" id="csum">Sum</p>
+                    <div class="fthrow">
+                        <p class="scr-1st" id="cfirst">1st throw: 0</p>
+                        <img class="img1" src="image/diceh1.jpeg" id="imgcf">
+                    </div>
+                    <div class="fthrow">
+                        <p class="scr-2nd" id="c2nd">2nd throw: 0</p>
+                        <img class="img1" src="image/diceh1.jpeg" id="imgcs">
+                    </div>
+            </div>
+            <div class="dice-throw">
+                <img src="image/diceh2.png" alt="dice" id="img">
+                <button class="dices" id="btn">Throw Dices</button>
+                <button class="dices" id="initial">Replay ?</button>
+            </div>
+        </div>
+        
+    </div>
+    <img src="image/arrow-left.svg" class="arrow" alt="">
+    
+</body>
+<script src="app.js"></script>
+</html>

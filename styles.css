@@ -1,0 +1,156 @@
+*,
+::before,
+::after {
+    margin-top: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(153, 126, 85);
+    
+    background-image: url(image/casino_2.jpeg);
+}
+
+body h1{
+    margin-top: 50px;
+    margin-left: 70px;
+    text-align: center;
+    font-family: fantasy;
+    color: #f8f8f8;
+}
+.container {
+    background-color: #e0e0e0;
+    width: 650px;
+    height: 500px;
+    box-shadow: 13px 13px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    margin-top: 100px;
+    margin-left: 30%;
+    border-radius: 5px;
+}
+.score {
+    display: grid;
+    margin-left : 230px;
+    grid-template-rows: repeat(3, 25px);
+    text-align: center;
+    width: 200px;
+    height: auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    background-color: rgb(151, 95, 204);
+    color: #f8f8f8;
+
+}
+.live-display {
+    text-align: center;
+    width: 350px;
+    height: auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    background-color: rgb(73, 186, 158);
+    color: #f8f8f8;
+
+}
+.main-box {
+    display: flex;
+    margin-top: 40px;
+    column-gap: 20px;
+
+}
+.dice-throw img {
+    width: 130px;
+    height:auto;
+    background-color: transparent;
+    margin-left: 15px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    animation: diceMove infinite 1s linear;   
+}
+
+.img1 {
+    position: absolute;
+    margin-top: -6%;
+    margin-left: 100px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+@keyframes diceMove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.dice-throw button {
+    width: 160px;
+    height:45px;
+    background-color: rgb(96, 133, 40);
+    color: #f8f8f8;
+    border-radius: 5px;
+    font-size: 18px;
+    border-color: transparent;
+    margin-top: 55px;
+}
+.dice-throw button:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.dice-throw {
+    display: grid;
+    align-content:center ;
+    margin-left: 30px;
+}
+.arrow {
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    margin-left: 920px;
+    margin-top: -33%;
+    font-weight: bold;
+    animation: arrowMove infinite 2s linear;
+}
+@keyframes arrowMove {
+    from {
+        transform:translateX(0%);
+    }
+    to {
+        transform:translateX(-60%);
+    }
+}
+.live-player .live-compute {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+.disp-player {
+    border:2px solid white;
+    height: 42px;
+    margin-bottom: 0px;
+    background-color: rgb(255, 123, 141);
+}
+.disp-player:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.scr-final, .scr-1st, .scr-2nd {
+    border:1px solid white;
+    margin-bottom: 0px;
+    height: 42px;
+    margin-top: 2px;
+    font-size: 20px;
+}
+.scr-final:hover, .scr-1st:hover, .scr-2nd:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.dices[disabled] {
+    opacity: 0.5;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    cursor: default;
+}
